@@ -1,0 +1,12 @@
+services:
+  leagueify-roster:
+    image: leagueify-roster-dev
+    build:
+      context: .
+      target: dev
+    command: air
+    ports:
+      - 6504:6504
+    volumes:
+      - ./:/app
+    restart: always
